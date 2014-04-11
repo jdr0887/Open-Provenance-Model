@@ -40,7 +40,14 @@
 
   <feature name="opm-web-services" version="${project.version}" resolver="(obr)">
     <bundle>mvn:org.renci.opm.opm-web/opm-web-service-api/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-activity/${project.version}</bundle>
     <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-document/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-organization/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-person/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-primary-source/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-quotation/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-revision/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-software-agent/${project.version}</bundle>
   </feature>
 
   <feature name="opm" version="${project.version}" resolver="(obr)">    
