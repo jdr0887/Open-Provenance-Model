@@ -18,7 +18,7 @@ public abstract class BaseDAOImpl<T extends Persistable, ID extends Serializable
 
     private final Logger logger = LoggerFactory.getLogger(BaseDAOImpl.class);
 
-    @PersistenceUnit(name = "hearsay-opm", unitName = "hearsay-opm")
+    @PersistenceUnit(name = "opm", unitName = "opm")
     private EntityManager entityManager;
 
     public BaseDAOImpl() {
