@@ -1,69 +1,69 @@
 <?xml version="1.0"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
-  <persistence-unit name="test-hearsay" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="test-opm" transaction-type="RESOURCE_LOCAL">
 
     <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
 
-    <class>org.renci.hearsay.dao.opm.model.Activity</class>
-    <class>org.renci.hearsay.dao.opm.model.Agent</class>
-    <class>org.renci.hearsay.dao.opm.model.Alternate</class>
-    <class>org.renci.hearsay.dao.opm.model.Association</class>
-    <class>org.renci.hearsay.dao.opm.model.Attribution</class>
-    <class>org.renci.hearsay.dao.opm.model.Bundle</class>
-    <class>org.renci.hearsay.dao.opm.model.BundleConstructor</class>
-    <class>org.renci.hearsay.dao.opm.model.Collection</class>
-    <class>org.renci.hearsay.dao.opm.model.Communication</class>
-    <class>org.renci.hearsay.dao.opm.model.Delegation</class>
-    <class>org.renci.hearsay.dao.opm.model.Derivation</class>
-    <class>org.renci.hearsay.dao.opm.model.Dictionary</class>
-    <class>org.renci.hearsay.dao.opm.model.DictionaryMembership</class>
-    <class>org.renci.hearsay.dao.opm.model.Document</class>
-    <class>org.renci.hearsay.dao.opm.model.Element</class>
-    <class>org.renci.hearsay.dao.opm.model.EmptyCollection</class>
-    <class>org.renci.hearsay.dao.opm.model.EmptyDictionary</class>
-    <class>org.renci.hearsay.dao.opm.model.End</class>
-    <class>org.renci.hearsay.dao.opm.model.Entity</class>
-    <class>org.renci.hearsay.dao.opm.model.Generation</class>
-    <class>org.renci.hearsay.dao.opm.model.Influence</class>
-    <class>org.renci.hearsay.dao.opm.model.Insertion</class>
-    <class>org.renci.hearsay.dao.opm.model.InternationalizedString</class>
-    <class>org.renci.hearsay.dao.opm.model.Invalidation</class>
-    <class>org.renci.hearsay.dao.opm.model.Key</class>
-    <class>org.renci.hearsay.dao.opm.model.KeyEntityPair</class>
-    <class>org.renci.hearsay.dao.opm.model.Location</class>
-    <class>org.renci.hearsay.dao.opm.model.Membership</class>
-    <class>org.renci.hearsay.dao.opm.model.Mention</class>
-    <class>org.renci.hearsay.dao.opm.model.Organization</class>
-    <class>org.renci.hearsay.dao.opm.model.Other</class>
-    <class>org.renci.hearsay.dao.opm.model.Person</class>
-    <class>org.renci.hearsay.dao.opm.model.Plan</class>
-    <class>org.renci.hearsay.dao.opm.model.PrimarySource</class>
-    <class>org.renci.hearsay.dao.opm.model.QualifiedName</class>
-    <class>org.renci.hearsay.dao.opm.model.Quotation</class>
-    <class>org.renci.hearsay.dao.opm.model.Removal</class>
-    <class>org.renci.hearsay.dao.opm.model.Revision</class>
-    <class>org.renci.hearsay.dao.opm.model.Role</class>
-    <class>org.renci.hearsay.dao.opm.model.SoftwareAgent</class>
-    <class>org.renci.hearsay.dao.opm.model.Specialization</class>
-    <class>org.renci.hearsay.dao.opm.model.Start</class>
-    <class>org.renci.hearsay.dao.opm.model.Type</class>
-    <class>org.renci.hearsay.dao.opm.model.TypedValue</class>
-    <class>org.renci.hearsay.dao.opm.model.Usage</class>
-    <class>org.renci.hearsay.dao.opm.model.Value</class>
+    <class>org.renci.opm.dao.model.Activity</class>
+    <class>org.renci.opm.dao.model.Agent</class>
+    <class>org.renci.opm.dao.model.Alternate</class>
+    <class>org.renci.opm.dao.model.Association</class>
+    <class>org.renci.opm.dao.model.Attribution</class>
+    <class>org.renci.opm.dao.model.Bundle</class>
+    <class>org.renci.opm.dao.model.BundleConstructor</class>
+    <class>org.renci.opm.dao.model.Collection</class>
+    <class>org.renci.opm.dao.model.Communication</class>
+    <class>org.renci.opm.dao.model.Delegation</class>
+    <class>org.renci.opm.dao.model.Derivation</class>
+    <class>org.renci.opm.dao.model.Dictionary</class>
+    <class>org.renci.opm.dao.model.DictionaryMembership</class>
+    <class>org.renci.opm.dao.model.Document</class>
+    <class>org.renci.opm.dao.model.Element</class>
+    <class>org.renci.opm.dao.model.EmptyCollection</class>
+    <class>org.renci.opm.dao.model.EmptyDictionary</class>
+    <class>org.renci.opm.dao.model.End</class>
+    <class>org.renci.opm.dao.model.Entity</class>
+    <class>org.renci.opm.dao.model.Generation</class>
+    <class>org.renci.opm.dao.model.Influence</class>
+    <class>org.renci.opm.dao.model.Insertion</class>
+    <class>org.renci.opm.dao.model.InternationalizedString</class>
+    <class>org.renci.opm.dao.model.Invalidation</class>
+    <class>org.renci.opm.dao.model.Key</class>
+    <class>org.renci.opm.dao.model.KeyEntityPair</class>
+    <class>org.renci.opm.dao.model.Location</class>
+    <class>org.renci.opm.dao.model.Membership</class>
+    <class>org.renci.opm.dao.model.Mention</class>
+    <class>org.renci.opm.dao.model.Organization</class>
+    <class>org.renci.opm.dao.model.Other</class>
+    <class>org.renci.opm.dao.model.Person</class>
+    <class>org.renci.opm.dao.model.Plan</class>
+    <class>org.renci.opm.dao.model.PrimarySource</class>
+    <class>org.renci.opm.dao.model.QualifiedName</class>
+    <class>org.renci.opm.dao.model.Quotation</class>
+    <class>org.renci.opm.dao.model.Removal</class>
+    <class>org.renci.opm.dao.model.Revision</class>
+    <class>org.renci.opm.dao.model.Role</class>
+    <class>org.renci.opm.dao.model.SoftwareAgent</class>
+    <class>org.renci.opm.dao.model.Specialization</class>
+    <class>org.renci.opm.dao.model.Start</class>
+    <class>org.renci.opm.dao.model.Type</class>
+    <class>org.renci.opm.dao.model.TypedValue</class>
+    <class>org.renci.opm.dao.model.Usage</class>
+    <class>org.renci.opm.dao.model.Value</class>
 
     <properties>
       <property name="openjpa.ConnectionProperties"
         value="DriverClassName=org.postgresql.Driver,
-        Url=jdbc:postgresql://localhost:5432/hearsay,
+        Url=jdbc:postgresql://localhost:5432/opm,
         MaxActive=100,
         MaxWait=1000,
         TestOnBorrow=true,
         RemoveAbandoned=true,
         RemoveAbandonedTimeout=60,
         LogAbandoned=60,
-        Username=hearsay,
-        Password=hearsay" />
+        Username=opm,
+        Password=opm" />
       <property name="openjpa.ConnectionDriverName" value="org.apache.commons.dbcp.BasicDataSource" />
       <property name="openjpa.ConnectionFactoryProperties" value="printParameters=true" />
       <property name="openjpa.jdbc.SchemaFactory" value="native(ForeignKeys=true)" />
