@@ -83,6 +83,13 @@
     </dependency>
   </dependencies>
   <modules>
+    <module>opm-web-service-activity</module>
     <module>opm-web-service-document</module>
+    <module>opm-web-service-organization</module>
+    <module>opm-web-service-person</module>
+    <module>opm-web-service-primary-source</module>
+    <module>opm-web-service-quotation</module>
+    <module>opm-web-service-revision</module>
+    <module>opm-web-service-software-agent</module>
   </modules>
 </project>
