@@ -31,7 +31,7 @@ public class RoundTripTest {
 
     @BeforeClass
     public static void setup() {
-        emf = Persistence.createEntityManagerFactory("test-hearsay", null);
+        emf = Persistence.createEntityManagerFactory("test-opm", null);
         em = emf.createEntityManager();
     }
 
