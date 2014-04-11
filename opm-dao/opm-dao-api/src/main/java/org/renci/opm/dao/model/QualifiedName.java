@@ -17,7 +17,7 @@ import javax.xml.namespace.QName;
 @XmlType(name = "QualifiedName")
 @NamedQuery(name = "QualifiedName.Find", query = "SELECT a FROM QualifiedName a WHERE a.namespaceURI LIKE :namespaceURI")
 @javax.persistence.Entity
-@Table(name = "qualified_name")
+@Table(name = "opm_qualified_name")
 public class QualifiedName extends Element {
 
     private static final long serialVersionUID = 8817857567472280656L;

@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Organization")
 @javax.persistence.Entity
-@Table(name = "organization")
+@Table(name = "opm_organization")
 public class Organization extends Agent {
 
     private static final long serialVersionUID = -8420932612093724167L;

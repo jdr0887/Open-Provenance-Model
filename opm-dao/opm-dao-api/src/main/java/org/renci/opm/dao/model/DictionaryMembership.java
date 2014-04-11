@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DictionaryMembership", propOrder = { "dictionary", "keyEntityPair" })
 @javax.persistence.Entity
-@Table(name = "dictionary_membership")
+@Table(name = "opm_dictionary_membership")
 public class DictionaryMembership extends Element {
 
     private static final long serialVersionUID = -622521269363537700L;

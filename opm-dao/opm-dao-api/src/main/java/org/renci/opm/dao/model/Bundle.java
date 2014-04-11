@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Bundle")
 @javax.persistence.Entity
-@Table(name = "bundle")
+@Table(name = "opm_bundle")
 public class Bundle extends Entity {
 
     private static final long serialVersionUID = -5507810132303323658L;

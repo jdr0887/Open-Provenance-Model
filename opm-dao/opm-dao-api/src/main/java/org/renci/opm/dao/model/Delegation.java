@@ -55,7 +55,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Delegation", propOrder = { "delegate", "responsible", "activity", "label", "type", "other" })
 @javax.persistence.Entity
-@Table(name = "delegation")
+@Table(name = "opm_delegation")
 public class Delegation extends Element {
 
     private static final long serialVersionUID = -7438489047493658499L;
@@ -79,15 +79,15 @@ public class Delegation extends Element {
     protected QualifiedName activity;
 
     @ManyToMany(targetEntity = InternationalizedString.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "delegation_internationalized_string", joinColumns = @JoinColumn(name = "delegation_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
+    @JoinTable(name = "opm_delegation_opm_internationalized_string", joinColumns = @JoinColumn(name = "delegation_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
     protected Set<InternationalizedString> label;
 
     @ManyToMany(targetEntity = Type.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "delegation_type", joinColumns = @JoinColumn(name = "delegation_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
+    @JoinTable(name = "opm_delegation_opm_type", joinColumns = @JoinColumn(name = "delegation_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
     protected Set<Type> type;
 
     @ManyToMany(targetEntity = Other.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "delegation_other", joinColumns = @JoinColumn(name = "delegation_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
+    @JoinTable(name = "opm_delegation_opm_other", joinColumns = @JoinColumn(name = "delegation_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
     protected Set<Other> other;
 
     @XmlAttribute(name = "id", namespace = "http://www.w3.org/ns/prov#")

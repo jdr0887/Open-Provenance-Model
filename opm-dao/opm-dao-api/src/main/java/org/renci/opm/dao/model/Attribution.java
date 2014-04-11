@@ -54,7 +54,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Attribution", propOrder = { "entity", "agent", "label", "type", "other" })
 @javax.persistence.Entity
-@Table(name = "attribution")
+@Table(name = "opm_attribution")
 public class Attribution extends Element {
 
     private static final long serialVersionUID = -7006273091382626638L;
@@ -72,15 +72,15 @@ public class Attribution extends Element {
     protected QualifiedName agent;
 
     @ManyToMany(targetEntity = InternationalizedString.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "attribution_internationalized_string", joinColumns = @JoinColumn(name = "attribution_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
+    @JoinTable(name = "opm_attribution_opm_internationalized_string", joinColumns = @JoinColumn(name = "attribution_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
     protected Set<InternationalizedString> label;
 
     @ManyToMany(targetEntity = Type.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "attribution_type", joinColumns = @JoinColumn(name = "attribution_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
+    @JoinTable(name = "opm_attribution_opm_type", joinColumns = @JoinColumn(name = "attribution_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
     protected Set<Type> type;
 
     @ManyToMany(targetEntity = Other.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "attribution_other", joinColumns = @JoinColumn(name = "attribution_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
+    @JoinTable(name = "opm_attribution_opm_other", joinColumns = @JoinColumn(name = "attribution_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
     protected Set<Other> other;
 
     @XmlAttribute(name = "id", namespace = "http://www.w3.org/ns/prov#")

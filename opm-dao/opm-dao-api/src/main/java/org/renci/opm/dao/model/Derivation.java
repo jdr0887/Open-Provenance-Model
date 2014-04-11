@@ -60,7 +60,7 @@ import javax.xml.namespace.QName;
         "label", "type", "other" })
 @XmlSeeAlso({ Revision.class, PrimarySource.class, Quotation.class })
 @javax.persistence.Entity
-@Table(name = "derivation")
+@Table(name = "opm_derivation")
 public class Derivation extends Element {
 
     private static final long serialVersionUID = 5086604982794622177L;
@@ -96,15 +96,15 @@ public class Derivation extends Element {
     protected QualifiedName usage;
 
     @ManyToMany(targetEntity = InternationalizedString.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "derivation_internationalized_string", joinColumns = @JoinColumn(name = "derivation_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
+    @JoinTable(name = "opm_derivation_opm_internationalized_string", joinColumns = @JoinColumn(name = "derivation_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
     protected Set<InternationalizedString> label;
 
     @ManyToMany(targetEntity = Type.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "derivation_type", joinColumns = @JoinColumn(name = "derivation_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
+    @JoinTable(name = "opm_derivation_opm_type", joinColumns = @JoinColumn(name = "derivation_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
     protected Set<Type> type;
 
     @ManyToMany(targetEntity = Other.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "derivation_other", joinColumns = @JoinColumn(name = "derivation_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
+    @JoinTable(name = "opm_derivation_opm_other", joinColumns = @JoinColumn(name = "derivation_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
     protected Set<Other> other;
 
     @XmlAttribute(name = "id", namespace = "http://www.w3.org/ns/prov#")

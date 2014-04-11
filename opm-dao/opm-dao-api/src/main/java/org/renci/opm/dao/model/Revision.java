@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Revision")
 @javax.persistence.Entity
-@Table(name = "revision")
+@Table(name = "opm_revision")
 public class Revision extends Derivation {
 
     private static final long serialVersionUID = 4536787894684669428L;
@@ -38,5 +38,4 @@ public class Revision extends Derivation {
         super();
     }
 
-    
 }

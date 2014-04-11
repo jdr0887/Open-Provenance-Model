@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Document", propOrder = { "entityOrActivityOrWasGeneratedBy" })
 @javax.persistence.Entity
-@Table(name = "document")
+@Table(name = "opm_document")
 public class Document extends Element {
 
     private static final long serialVersionUID = -5512618575408921575L;

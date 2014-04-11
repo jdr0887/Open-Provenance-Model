@@ -57,7 +57,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Activity", propOrder = { "startTime", "endTime", "label", "location", "type", "other" })
 @javax.persistence.Entity
-@Table(name = "activity")
+@Table(name = "opm_activity")
 public class Activity extends Element {
 
     private static final long serialVersionUID = -678036891894737204L;
@@ -71,19 +71,19 @@ public class Activity extends Element {
     protected Date endTime;
 
     @ManyToMany(targetEntity = InternationalizedString.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "activity_internationalized_string", joinColumns = @JoinColumn(name = "activity_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
+    @JoinTable(name = "opm_activity_opm_internationalized_string", joinColumns = @JoinColumn(name = "activity_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
     protected Set<InternationalizedString> label;
 
     @ManyToMany(targetEntity = Location.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "activity_location", joinColumns = @JoinColumn(name = "activity_fk"), inverseJoinColumns = @JoinColumn(name = "location_fk"))
+    @JoinTable(name = "opm_activity_opm_location", joinColumns = @JoinColumn(name = "activity_fk"), inverseJoinColumns = @JoinColumn(name = "location_fk"))
     protected Set<Location> location;
 
     @ManyToMany(targetEntity = Type.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "activity_type", joinColumns = @JoinColumn(name = "activity_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
+    @JoinTable(name = "opm_activity_opm_type", joinColumns = @JoinColumn(name = "activity_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
     protected Set<Type> type;
 
     @ManyToMany(targetEntity = Other.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "activity_other", joinColumns = @JoinColumn(name = "activity_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
+    @JoinTable(name = "opm_activity_opm_other", joinColumns = @JoinColumn(name = "activity_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
     protected Set<Other> other;
 
     @XmlAttribute(name = "id", namespace = "http://www.w3.org/ns/prov#")

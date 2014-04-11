@@ -29,9 +29,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Quotation")
 @javax.persistence.Entity
-@Table(name = "quotation")
+@Table(name = "opm_quotation")
 public class Quotation extends Derivation {
 
     private static final long serialVersionUID = 8209190739518481615L;
+
+    public Quotation() {
+        super();
+    }
 
 }

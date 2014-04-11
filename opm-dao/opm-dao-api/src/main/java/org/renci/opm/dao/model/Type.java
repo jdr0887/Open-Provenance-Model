@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Type", namespace = "http://www.w3.org/ns/prov#")
 @javax.persistence.Entity
-@Table(name = "type")
+@Table(name = "opm_type")
 @XmlJavaTypeAdapter(type = Type.class, value = TypeAdapter.class)
 public class Type extends TypedValue {
 

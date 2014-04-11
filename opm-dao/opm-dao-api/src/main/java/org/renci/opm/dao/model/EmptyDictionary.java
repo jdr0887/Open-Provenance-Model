@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EmptyDictionary")
 @javax.persistence.Entity
-@Table(name = "empty_dictionary")
+@Table(name = "opm_empty_dictionary")
 public class EmptyDictionary extends Dictionary {
 
     private static final long serialVersionUID = -3406828946420143816L;

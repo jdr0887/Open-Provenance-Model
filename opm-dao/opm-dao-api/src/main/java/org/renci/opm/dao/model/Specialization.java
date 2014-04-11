@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Specialization", propOrder = { "specificEntity", "generalEntity" })
 @javax.persistence.Entity
-@Table(name = "specialization")
+@Table(name = "opm_specialization")
 public class Specialization extends Element {
 
     private static final long serialVersionUID = 4308075117164896612L;

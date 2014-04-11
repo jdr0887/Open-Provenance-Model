@@ -29,9 +29,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Plan")
 @javax.persistence.Entity
-@Table(name = "plan")
+@Table(name = "opm_plan")
 public class Plan extends Entity {
 
     private static final long serialVersionUID = 8797181737618255938L;
+
+    public Plan() {
+        super();
+    }
 
 }

@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Other", propOrder = {})
 @javax.persistence.Entity
-@Table(name = "other")
+@Table(name = "opm_other")
 public class Other extends Element {
 
     private static final long serialVersionUID = 2127846537535332212L;

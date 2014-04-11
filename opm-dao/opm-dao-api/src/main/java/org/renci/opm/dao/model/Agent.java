@@ -54,25 +54,25 @@ import javax.xml.namespace.QName;
 @XmlType(name = "Agent", propOrder = { "label", "location", "type", "other" })
 @XmlSeeAlso({ Person.class, SoftwareAgent.class, Organization.class })
 @javax.persistence.Entity
-@Table(name = "agent")
+@Table(name = "opm_agent")
 public class Agent extends Element {
 
     private static final long serialVersionUID = 1873876055023182060L;
 
     @ManyToMany(targetEntity = InternationalizedString.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "agent_internationalized_string", joinColumns = @JoinColumn(name = "agent_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
+    @JoinTable(name = "opm_agent_opm_internationalized_string", joinColumns = @JoinColumn(name = "agent_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
     protected Set<InternationalizedString> label;
 
     @ManyToMany(targetEntity = Location.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "agent_location", joinColumns = @JoinColumn(name = "agent_fk"), inverseJoinColumns = @JoinColumn(name = "location_fk"))
+    @JoinTable(name = "opm_agent_opm_location", joinColumns = @JoinColumn(name = "agent_fk"), inverseJoinColumns = @JoinColumn(name = "location_fk"))
     protected Set<Location> location;
 
     @ManyToMany(targetEntity = Type.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "agent_type", joinColumns = @JoinColumn(name = "agent_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
+    @JoinTable(name = "opm_agent_opm_type", joinColumns = @JoinColumn(name = "agent_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
     protected Set<Type> type;
 
     @ManyToMany(targetEntity = Other.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "agent_other", joinColumns = @JoinColumn(name = "agent_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
+    @JoinTable(name = "opm_agent_opm_other", joinColumns = @JoinColumn(name = "agent_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
     protected Set<Other> other;
 
     @XmlAttribute(name = "id", namespace = "http://www.w3.org/ns/prov#")

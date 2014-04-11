@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Value", namespace = "http://www.w3.org/ns/prov#", propOrder = {})
 @javax.persistence.Entity
-@Table(name = "value")
+@Table(name = "opm_value")
 public class Value extends Element {
 
     private static final long serialVersionUID = 5400310423166053372L;

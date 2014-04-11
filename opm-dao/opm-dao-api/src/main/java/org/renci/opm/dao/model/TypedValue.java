@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TypedValue", namespace = "http://www.w3.org/ns/prov#", propOrder = {})
 @javax.persistence.Entity
-@Table(name = "typed_value")
+@Table(name = "opm_typed_value")
 public class TypedValue extends Value {
 
     private static final long serialVersionUID = 8138582830128718779L;

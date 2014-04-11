@@ -75,7 +75,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BundleConstructor", propOrder = { "entityOrActivityOrWasGeneratedBy" })
 @javax.persistence.Entity
-@Table(name = "bundle_constructor")
+@Table(name = "opm_bundle_constructor")
 public class BundleConstructor {
 
     @XmlElementRefs({

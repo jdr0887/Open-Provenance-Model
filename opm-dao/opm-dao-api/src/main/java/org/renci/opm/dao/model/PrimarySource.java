@@ -29,9 +29,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PrimarySource")
 @javax.persistence.Entity
-@Table(name = "primary_source")
+@Table(name = "opm_primary_source")
 public class PrimarySource extends Derivation {
 
     private static final long serialVersionUID = -5022276831254059251L;
+
+    public PrimarySource() {
+        super();
+    }
 
 }

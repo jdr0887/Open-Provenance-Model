@@ -59,7 +59,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Usage", propOrder = { "activity", "entity", "time", "label", "location", "role", "type", "other" })
 @javax.persistence.Entity
-@Table(name = "usage")
+@Table(name = "opm_usage")
 public class Usage extends Element {
 
     private static final long serialVersionUID = 7780106173528630600L;
@@ -80,23 +80,23 @@ public class Usage extends Element {
     private Date time;
 
     @ManyToMany(targetEntity = InternationalizedString.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "usage_internationalized_string", joinColumns = @JoinColumn(name = "usage_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
+    @JoinTable(name = "opm_usage_opm_internationalized_string", joinColumns = @JoinColumn(name = "usage_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
     protected Set<InternationalizedString> label;
 
     @ManyToMany(targetEntity = Location.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "usage_location", joinColumns = @JoinColumn(name = "usage_fk"), inverseJoinColumns = @JoinColumn(name = "location_fk"))
+    @JoinTable(name = "opm_usage_opm_location", joinColumns = @JoinColumn(name = "usage_fk"), inverseJoinColumns = @JoinColumn(name = "location_fk"))
     private Set<Location> location;
 
     @ManyToMany(targetEntity = Role.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "usage_role", joinColumns = @JoinColumn(name = "usage_fk"), inverseJoinColumns = @JoinColumn(name = "role_fk"))
+    @JoinTable(name = "opm_usage_opm_role", joinColumns = @JoinColumn(name = "usage_fk"), inverseJoinColumns = @JoinColumn(name = "role_fk"))
     private Set<Role> role;
 
     @ManyToMany(targetEntity = Type.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "usage_type", joinColumns = @JoinColumn(name = "usage_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
+    @JoinTable(name = "opm_usage_opm_type", joinColumns = @JoinColumn(name = "usage_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
     private Set<Type> type;
 
     @ManyToMany(targetEntity = Other.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "usage_other", joinColumns = @JoinColumn(name = "usage_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
+    @JoinTable(name = "opm_usage_opm_other", joinColumns = @JoinColumn(name = "usage_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
     protected Set<Other> other;
 
     @XmlAttribute(name = "id", namespace = "http://www.w3.org/ns/prov#")

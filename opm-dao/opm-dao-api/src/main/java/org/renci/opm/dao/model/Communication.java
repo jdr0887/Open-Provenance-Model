@@ -54,7 +54,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Communication", propOrder = { "informed", "informant", "label", "type", "other" })
 @javax.persistence.Entity
-@Table(name = "communication")
+@Table(name = "opm_communication")
 public class Communication extends Element {
 
     private static final long serialVersionUID = 9013211011145449069L;
@@ -72,15 +72,15 @@ public class Communication extends Element {
     protected QualifiedName informant;
 
     @ManyToMany(targetEntity = InternationalizedString.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "communication_internationalized_string", joinColumns = @JoinColumn(name = "communication_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
+    @JoinTable(name = "opm_communication_opm_internationalized_string", joinColumns = @JoinColumn(name = "communication_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
     protected Set<InternationalizedString> label;
 
     @ManyToMany(targetEntity = Type.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "communication_type", joinColumns = @JoinColumn(name = "communication_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
+    @JoinTable(name = "opm_communication_opm_type", joinColumns = @JoinColumn(name = "communication_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
     protected Set<Type> type;
 
     @ManyToMany(targetEntity = Other.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "communication_other", joinColumns = @JoinColumn(name = "communication_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
+    @JoinTable(name = "opm_communication_opm_other", joinColumns = @JoinColumn(name = "communication_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
     protected Set<Other> other;
 
     @XmlAttribute(name = "id", namespace = "http://www.w3.org/ns/prov#")

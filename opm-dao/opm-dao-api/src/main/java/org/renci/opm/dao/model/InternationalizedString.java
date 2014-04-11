@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "InternationalizedString", propOrder = { "value" })
 @javax.persistence.Entity
-@Table(name = "internationalized_string")
+@Table(name = "opm_internationalized_string")
 public class InternationalizedString extends Element {
 
     private static final long serialVersionUID = 6122311693829692680L;

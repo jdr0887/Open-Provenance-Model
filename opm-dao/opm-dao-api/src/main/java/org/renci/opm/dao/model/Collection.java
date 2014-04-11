@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Collection")
 @XmlSeeAlso({ EmptyCollection.class, Dictionary.class })
 @javax.persistence.Entity
-@Table(name = "collection")
+@Table(name = "opm_collection")
 public class Collection extends Entity {
 
     private static final long serialVersionUID = -6000708894311978410L;

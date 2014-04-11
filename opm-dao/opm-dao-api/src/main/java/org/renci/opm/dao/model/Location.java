@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Location", propOrder = {})
 @javax.persistence.Entity
-@Table(name = "location")
+@Table(name = "opm_location")
 @XmlJavaTypeAdapter(type = Location.class, value = LocationAdapter.class)
 public class Location extends TypedValue {
 

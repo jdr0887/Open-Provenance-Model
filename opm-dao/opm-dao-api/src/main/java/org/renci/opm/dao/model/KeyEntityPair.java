@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "KeyEntityPair", propOrder = {})
 @javax.persistence.Entity
-@Table(name = "key_entity_pair")
+@Table(name = "opm_key_entity_pair")
 public class KeyEntityPair extends Element {
 
     private static final long serialVersionUID = -6494270978560496039L;

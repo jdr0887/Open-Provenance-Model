@@ -56,7 +56,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Association", propOrder = { "activity", "agent", "plan", "label", "role", "type", "other" })
 @javax.persistence.Entity
-@Table(name = "association")
+@Table(name = "opm_association")
 public class Association extends Element {
 
     private static final long serialVersionUID = 371997270157919088L;
@@ -80,19 +80,19 @@ public class Association extends Element {
     protected QualifiedName plan;
 
     @ManyToMany(targetEntity = InternationalizedString.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "association_internationalized_string", joinColumns = @JoinColumn(name = "association_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
+    @JoinTable(name = "opm_association_opm_internationalized_string", joinColumns = @JoinColumn(name = "association_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
     protected Set<InternationalizedString> label;
 
     @ManyToMany(targetEntity = Role.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "association_role", joinColumns = @JoinColumn(name = "association_fk"), inverseJoinColumns = @JoinColumn(name = "role_fk"))
+    @JoinTable(name = "opm_association_opm_role", joinColumns = @JoinColumn(name = "association_fk"), inverseJoinColumns = @JoinColumn(name = "role_fk"))
     protected Set<Role> role;
 
     @ManyToMany(targetEntity = Type.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "association_type", joinColumns = @JoinColumn(name = "association_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
+    @JoinTable(name = "opm_association_opm_type", joinColumns = @JoinColumn(name = "association_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
     protected Set<Type> type;
 
     @ManyToMany(targetEntity = Other.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "association_other", joinColumns = @JoinColumn(name = "association_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
+    @JoinTable(name = "opm_association_opm_other", joinColumns = @JoinColumn(name = "association_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
     protected Set<Other> other;
 
     @XmlAttribute(name = "id", namespace = "http://www.w3.org/ns/prov#")

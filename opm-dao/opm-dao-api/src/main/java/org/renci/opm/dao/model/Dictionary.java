@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Dictionary")
 @XmlSeeAlso({ EmptyDictionary.class })
 @javax.persistence.Entity
-@Table(name = "dictionary")
+@Table(name = "opm_dictionary")
 public class Dictionary extends Collection {
 
     private static final long serialVersionUID = 7319059471315066294L;

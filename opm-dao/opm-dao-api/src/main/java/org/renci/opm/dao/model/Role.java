@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Role")
 @javax.persistence.Entity
-@Table(name = "role")
+@Table(name = "opm_role")
 public class Role extends TypedValue {
 
     private static final long serialVersionUID = 8309857214675278140L;

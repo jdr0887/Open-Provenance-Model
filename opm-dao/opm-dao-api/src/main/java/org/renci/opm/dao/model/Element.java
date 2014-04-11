@@ -17,7 +17,7 @@ import org.renci.opm.dao.Persistable;
 
 @XmlTransient
 @javax.persistence.Entity
-@Table(name = "element")
+@Table(name = "opm_element")
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "discriminator", discriminatorType = DiscriminatorType.STRING)
 public class Element implements Persistable {
@@ -26,8 +26,8 @@ public class Element implements Persistable {
 
     @XmlAttribute(name = "pk")
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "element_sequence")
-    @SequenceGenerator(name = "element_sequence", sequenceName = "element_sequence", allocationSize = 1, initialValue = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "opm_element_sequence")
+    @SequenceGenerator(name = "opm_element_sequence", sequenceName = "opm_element_sequence", allocationSize = 1, initialValue = 1)
     @Column(name = "pk", nullable = false)
     protected Long primaryKey;
 

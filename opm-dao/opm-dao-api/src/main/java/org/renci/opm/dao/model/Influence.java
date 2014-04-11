@@ -54,7 +54,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Influence", propOrder = { "influencee", "influencer", "label", "type", "other" })
 @javax.persistence.Entity
-@Table(name = "influence")
+@Table(name = "opm_influence")
 public class Influence extends Element {
 
     private static final long serialVersionUID = -613700214278933819L;
@@ -72,15 +72,15 @@ public class Influence extends Element {
     protected QualifiedName influencer;
 
     @ManyToMany(targetEntity = InternationalizedString.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "influence_internationalized_string", joinColumns = @JoinColumn(name = "influence_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
+    @JoinTable(name = "opm_influence_opm_internationalized_string", joinColumns = @JoinColumn(name = "influence_fk"), inverseJoinColumns = @JoinColumn(name = "internationalized_string_fk"))
     protected Set<InternationalizedString> label;
 
     @ManyToMany(targetEntity = Type.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "influence_type", joinColumns = @JoinColumn(name = "influence_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
+    @JoinTable(name = "opm_influence_opm_type", joinColumns = @JoinColumn(name = "influence_fk"), inverseJoinColumns = @JoinColumn(name = "type_fk"))
     protected Set<Type> type;
 
     @ManyToMany(targetEntity = Other.class, cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinTable(name = "influence_other", joinColumns = @JoinColumn(name = "influence_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
+    @JoinTable(name = "opm_influence_opm_other", joinColumns = @JoinColumn(name = "influence_fk"), inverseJoinColumns = @JoinColumn(name = "other_fk"))
     protected Set<Other> other;
 
     @XmlAttribute(name = "id", namespace = "http://www.w3.org/ns/prov#")

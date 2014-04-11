@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EmptyCollection")
 @javax.persistence.Entity
-@Table(name = "empty_collection")
+@Table(name = "opm_empty_collection")
 public class EmptyCollection extends Collection {
 
     private static final long serialVersionUID = 6902706357354600339L;
