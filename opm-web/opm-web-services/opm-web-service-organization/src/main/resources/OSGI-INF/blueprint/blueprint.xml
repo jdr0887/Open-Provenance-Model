@@ -11,9 +11,9 @@
   http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
   ">
 
-  <reference id="organizationDAO" interface="org.renci.hearsay.dao.opm.OrganizationDAO" />
+  <reference id="organizationDAO" interface="org.renci.opm.dao.OrganizationDAO" />
 
-  <bean id="organization" class="org.renci.hearsay.ws.impl.OrganizationServiceImpl">
+  <bean id="organization" class="org.renci.opm.ws.impl.OrganizationServiceImpl">
     <property name="organizationDAO" ref="organizationDAO" />
   </bean>
 

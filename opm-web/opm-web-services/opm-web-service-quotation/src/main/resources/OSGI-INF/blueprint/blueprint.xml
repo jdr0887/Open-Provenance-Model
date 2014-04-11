@@ -11,9 +11,9 @@
   http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
   ">
 
-  <reference id="quotationDAO" interface="org.renci.hearsay.dao.opm.QuotationDAO" />
+  <reference id="quotationDAO" interface="org.renci.opm.dao.QuotationDAO" />
 
-  <bean id="quotation" class="org.renci.hearsay.ws.impl.QuotationServiceImpl">
+  <bean id="quotation" class="org.renci.opm.ws.impl.QuotationServiceImpl">
     <property name="quotationDAO" ref="quotationDAO" />
   </bean>
 

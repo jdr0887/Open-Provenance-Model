@@ -11,9 +11,9 @@
   http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
   ">
 
-  <reference id="documentDAO" interface="org.renci.hearsay.dao.opm.DocumentDAO" />
+  <reference id="documentDAO" interface="org.renci.opm.dao.DocumentDAO" />
 
-  <bean id="document" class="org.renci.hearsay.ws.impl.DocumentServiceImpl">
+  <bean id="document" class="org.renci.opm.ws.impl.DocumentServiceImpl">
     <property name="documentDAO" ref="documentDAO" />
   </bean>
 

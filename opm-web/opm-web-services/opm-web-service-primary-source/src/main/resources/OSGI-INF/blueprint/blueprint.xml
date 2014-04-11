@@ -11,9 +11,9 @@
   http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
   ">
 
-  <reference id="primarySourceDAO" interface="org.renci.hearsay.dao.opm.PrimarySourceDAO" />
+  <reference id="primarySourceDAO" interface="org.renci.opm.dao.PrimarySourceDAO" />
 
-  <bean id="primarySource" class="org.renci.hearsay.ws.impl.PrimarySourceServiceImpl">
+  <bean id="primarySource" class="org.renci.opm.ws.impl.PrimarySourceServiceImpl">
     <property name="primarySourceDAO" ref="primarySourceDAO" />
   </bean>
 

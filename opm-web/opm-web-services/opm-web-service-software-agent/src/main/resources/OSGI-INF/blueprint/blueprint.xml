@@ -11,9 +11,9 @@
   http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
   ">
 
-  <reference id="softwareAgentDAO" interface="org.renci.hearsay.dao.opm.SoftwareAgentDAO" />
+  <reference id="softwareAgentDAO" interface="org.renci.opm.dao.SoftwareAgentDAO" />
 
-  <bean id="softwareAgent" class="org.renci.hearsay.ws.impl.SoftwareAgentServiceImpl">
+  <bean id="softwareAgent" class="org.renci.opm.ws.impl.SoftwareAgentServiceImpl">
     <property name="softwareAgentDAO" ref="softwareAgentDAO" />
   </bean>
 

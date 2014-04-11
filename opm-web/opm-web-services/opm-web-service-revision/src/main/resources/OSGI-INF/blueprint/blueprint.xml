@@ -11,9 +11,9 @@
   http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
   ">
 
-  <reference id="revisionDAO" interface="org.renci.hearsay.dao.opm.RevisionDAO" />
+  <reference id="revisionDAO" interface="org.renci.opm.dao.RevisionDAO" />
 
-  <bean id="revision" class="org.renci.hearsay.ws.impl.RevisionServiceImpl">
+  <bean id="revision" class="org.renci.opm.ws.impl.RevisionServiceImpl">
     <property name="revisionDAO" ref="revisionDAO" />
   </bean>
 

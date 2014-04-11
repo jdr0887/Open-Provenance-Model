@@ -11,9 +11,9 @@
   http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
   ">
 
-  <reference id="activityDAO" interface="org.renci.hearsay.dao.opm.ActivityDAO" />
+  <reference id="activityDAO" interface="org.renci.opm.dao.ActivityDAO" />
 
-  <bean id="activity" class="org.renci.hearsay.ws.impl.ActivityServiceImpl">
+  <bean id="activity" class="org.renci.opm.ws.impl.ActivityServiceImpl">
     <property name="activityDAO" ref="activityDAO" />
   </bean>
 

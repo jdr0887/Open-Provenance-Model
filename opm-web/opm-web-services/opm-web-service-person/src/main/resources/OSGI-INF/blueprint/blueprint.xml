@@ -11,9 +11,9 @@
   http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
   ">
 
-  <reference id="personDAO" interface="org.renci.hearsay.dao.opm.PersonDAO" />
+  <reference id="personDAO" interface="org.renci.opm.dao.PersonDAO" />
 
-  <bean id="person" class="org.renci.hearsay.ws.impl.PersonServiceImpl">
+  <bean id="person" class="org.renci.opm.ws.impl.PersonServiceImpl">
     <property name="personDAO" ref="personDAO" />
   </bean>
 
