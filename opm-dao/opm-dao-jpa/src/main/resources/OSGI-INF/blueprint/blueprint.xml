@@ -2,11 +2,60 @@
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.0.0"
   xmlns:jpa="http://aries.apache.org/xmlns/jpa/v1.0.0" default-activation="eager">
 
-  <bean id="documentDAOImpl" class="org.renci.hearsay.dao.opm.jpa.DocumentDAOImpl">
+  <bean id="activityDAOImpl" class="org.renci.opm.dao.jpa.ActivityDAOImpl">
     <tx:transaction method="*" value="Required" />
-    <jpa:context property="entityManager" unitname="hearsay-opm" />
+    <jpa:context property="entityManager" unitname="opm" />
   </bean>
 
-  <service ref="documentDAOImpl" interface="org.renci.hearsay.dao.opm.DocumentDAO" />
+  <service ref="activityDAOImpl" interface="org.renci.opm.dao.ActivityDAO" />
+
+  <bean id="documentDAOImpl" class="org.renci.opm.dao.jpa.DocumentDAOImpl">
+    <tx:transaction method="*" value="Required" />
+    <jpa:context property="entityManager" unitname="opm" />
+  </bean>
+
+  <service ref="documentDAOImpl" interface="org.renci.opm.dao.DocumentDAO" />
+
+  <bean id="organizationDAOImpl" class="org.renci.opm.dao.jpa.OrganizationDAOImpl">
+    <tx:transaction method="*" value="Required" />
+    <jpa:context property="entityManager" unitname="opm" />
+  </bean>
+
+  <service ref="organizationDAOImpl" interface="org.renci.opm.dao.OrganizationDAO" />
+
+  <bean id="personDAOImpl" class="org.renci.opm.dao.jpa.PersonDAOImpl">
+    <tx:transaction method="*" value="Required" />
+    <jpa:context property="entityManager" unitname="opm" />
+  </bean>
+
+  <service ref="personDAOImpl" interface="org.renci.opm.dao.PersonDAO" />
+
+  <bean id="primarySourceDAOImpl" class="org.renci.opm.dao.jpa.PrimarySourceDAOImpl">
+    <tx:transaction method="*" value="Required" />
+    <jpa:context property="entityManager" unitname="opm" />
+  </bean>
+
+  <service ref="primarySourceDAOImpl" interface="org.renci.opm.dao.PrimarySourceDAO" />
+
+  <bean id="quotationDAOImpl" class="org.renci.opm.dao.jpa.QuotationDAOImpl">
+    <tx:transaction method="*" value="Required" />
+    <jpa:context property="entityManager" unitname="opm" />
+  </bean>
+
+  <service ref="quotationDAOImpl" interface="org.renci.opm.dao.QuotationDAO" />
+
+  <bean id="revisionDAOImpl" class="org.renci.opm.dao.jpa.RevisionDAOImpl">
+    <tx:transaction method="*" value="Required" />
+    <jpa:context property="entityManager" unitname="opm" />
+  </bean>
+
+  <service ref="revisionDAOImpl" interface="org.renci.opm.dao.RevisionDAO" />
+
+  <bean id="softwareAgentDAOImpl" class="org.renci.opm.dao.jpa.SoftwareAgentDAOImpl">
+    <tx:transaction method="*" value="Required" />
+    <jpa:context property="entityManager" unitname="opm" />
+  </bean>
+
+  <service ref="softwareAgentDAOImpl" interface="org.renci.opm.dao.SoftwareAgentDAO" />
 
 </blueprint>
