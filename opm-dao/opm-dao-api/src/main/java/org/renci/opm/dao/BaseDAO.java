@@ -3,8 +3,6 @@ package org.renci.opm.dao;
 import java.io.Serializable;
 import java.util.List;
 
-import org.renci.opm.dao.Persistable;
-
 public interface BaseDAO<T extends Persistable, ID extends Serializable> {
 
     /**
