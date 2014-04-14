@@ -16,6 +16,13 @@
 
   <service ref="documentDAOImpl" interface="org.renci.opm.dao.DocumentDAO" />
 
+  <bean id="endDAOImpl" class="org.renci.opm.dao.jpa.EndDAOImpl">
+    <tx:transaction method="*" value="Required" />
+    <jpa:context property="entityManager" unitname="opm" />
+  </bean>
+
+  <service ref="endDAOImpl" interface="org.renci.opm.dao.EndDAO" />
+
   <bean id="organizationDAOImpl" class="org.renci.opm.dao.jpa.OrganizationDAOImpl">
     <tx:transaction method="*" value="Required" />
     <jpa:context property="entityManager" unitname="opm" />
@@ -57,5 +64,12 @@
   </bean>
 
   <service ref="softwareAgentDAOImpl" interface="org.renci.opm.dao.SoftwareAgentDAO" />
+
+  <bean id="startDAOImpl" class="org.renci.opm.dao.jpa.StartDAOImpl">
+    <tx:transaction method="*" value="Required" />
+    <jpa:context property="entityManager" unitname="opm" />
+  </bean>
+
+  <service ref="startDAOImpl" interface="org.renci.opm.dao.StartDAO" />
 
 </blueprint>
