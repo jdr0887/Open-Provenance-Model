@@ -12,18 +12,26 @@
   <packaging>bundle</packaging>
   <dependencies>
     <dependency>
+      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+      <artifactId>jackson-jaxrs-json-provider</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+    </dependency>
+    <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>javax.ws.rs</groupId>
-      <artifactId>javax.ws.rs-api</artifactId>      
-    </dependency>
-    <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
       <scope>provided</scope>      
+    </dependency>
+    <dependency>
+      <groupId>org.renci.opm</groupId>
+      <artifactId>opm-config</artifactId>
     </dependency>
     <dependency>
       <groupId>org.renci.opm.opm-dao</groupId>
@@ -54,8 +62,8 @@
       <artifactId>spring-context-support</artifactId>
     </dependency>
     <dependency>
-      <groupId>edu.unc.mapseq.mapseq-web</groupId>
-      <artifactId>mapseq-web-service-api</artifactId>
+      <groupId>org.renci.opm.opm-web</groupId>
+      <artifactId>opm-web-service-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
