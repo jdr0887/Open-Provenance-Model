@@ -2,7 +2,7 @@
   <parent>
     <groupId>org.renci.opm</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
   </parent>
   <name>Open Provenance Model</name>
   <modelVersion>4.0.0</modelVersion>
@@ -12,10 +12,10 @@
   <packaging>pom</packaging>
   <url>https://ci-dev.renci.org/site/opm</url>
   <properties>
-    <karaf.version>2.3.4</karaf.version>
-    <cxf.version>2.7.6</cxf.version>
+    <karaf.version>2.3.5</karaf.version>
+    <cxf.version>2.7.8</cxf.version>
     <spring.version>3.2.4.RELEASE</spring.version>
-    <openjpa.version>2.2.2</openjpa.version>
+    <jackson.version>2.3.1</jackson.version>
   </properties>
   <issueManagement>
     <system>gForge</system>
@@ -47,6 +47,31 @@
 	<version>${karaf.version}</version>
 	<type>xml</type>
 	<classifier>features</classifier>
+      </dependency>
+      <dependency>
+	<groupId>com.fasterxml.jackson.module</groupId>
+	<artifactId>jackson-module-jaxb-annotations</artifactId>
+	<version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+	<groupId>com.fasterxml.jackson.jaxrs</groupId>
+	<artifactId>jackson-jaxrs-json-provider</artifactId>
+	<version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-core</artifactId>
+	<version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-annotations</artifactId>
+	<version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-databind</artifactId>
+	<version>${jackson.version}</version>
       </dependency>
       <dependency>
 	<groupId>org.apache.felix</groupId>
@@ -95,26 +120,6 @@
       </dependency>
       <dependency>
       	<groupId>org.apache.cxf</groupId>
-      	<artifactId>cxf-rt-ws-rm</artifactId>
-      	<version>${cxf.version}</version>
-      </dependency>
-      <dependency>
-      	<groupId>org.apache.cxf</groupId>
-      	<artifactId>cxf-rt-ws-security</artifactId>
-      	<version>${cxf.version}</version>
-      </dependency>
-      <dependency>
-      	<groupId>org.apache.cxf</groupId>
-      	<artifactId>cxf-rt-ws-addr</artifactId>
-      	<version>${cxf.version}</version>
-      </dependency>
-      <dependency>
-      	<groupId>org.apache.cxf</groupId>
-      	<artifactId>cxf-rt-ws-policy</artifactId>
-      	<version>${cxf.version}</version>
-      </dependency>
-      <dependency>
-      	<groupId>org.apache.cxf</groupId>
       	<artifactId>cxf-bundle</artifactId>
       	<version>${cxf.version}</version>
       </dependency>
@@ -129,9 +134,9 @@
       	<version>3.1.1</version>
       </dependency>
       <dependency>
-      	<groupId>postgresql</groupId>
+      	<groupId>org.postgresql</groupId>
       	<artifactId>postgresql</artifactId>
-      	<version>9.1-901.jdbc4</version>
+      	<version>9.3-1100-jdbc4</version>
       </dependency>
       <dependency>
       	<groupId>org.springframework</groupId>
@@ -152,6 +157,11 @@
       	<groupId>org.springframework</groupId>
       	<artifactId>spring-core</artifactId>
       	<version>${spring.version}</version>
+      </dependency>
+      <dependency>
+      	<groupId>org.renci.opm</groupId>
+      	<artifactId>opm-config</artifactId>
+      	<version>0.0.1-SNAPSHOT</version>
       </dependency>
       <dependency>
       	<groupId>org.renci.opm.opm-web</groupId>
@@ -184,29 +194,14 @@
       	<version>1.1</version>
       </dependency>
       <dependency>
-      	<groupId>org.apache.geronimo.specs</groupId>
-      	<artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
-      	<version>1.1.3</version>
-      </dependency>
-      <dependency>
 	<groupId>org.apache.geronimo.specs</groupId>
 	<artifactId>geronimo-jaxrs_1.1_spec</artifactId>
 	<version>1.0</version>
       </dependency>
       <dependency>
-      	<groupId>org.apache.geronimo.specs</groupId>
-      	<artifactId>geronimo-jaxws_2.2_spec</artifactId>
-      	<version>1.1</version>
-      </dependency>
-      <dependency>
 	<groupId>org.apache.cxf</groupId>
 	<artifactId>cxf-rt-frontend-jaxrs</artifactId>
 	<version>${cxf.version}</version>
-      </dependency>
-      <dependency>
-      	<groupId>org.apache.cxf</groupId>
-      	<artifactId>cxf-rt-frontend-jaxws</artifactId>
-      	<version>${cxf.version}</version>
       </dependency>
       <dependency>
       	<groupId>org.apache.cxf</groupId>
@@ -273,6 +268,7 @@
     </plugins>
   </build>
   <modules>
+    <module>opm-config</module>
     <module>opm-ds</module>
     <module>opm-dao</module>
     <module>opm-web</module>
