@@ -1,6 +1,5 @@
 package org.renci.opm.dao.model;
 
-
 public class RoleAdapter extends AbstractTypedValueAdapter<Role> {
 
     public RoleAdapter() {
