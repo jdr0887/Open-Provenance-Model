@@ -13,6 +13,6 @@
   <modules>
     <module>opm-dao-api</module>
     <module>opm-dao-jpa</module>
-    <!-- <module>opm-dao-rs</module> -->
+    <module>opm-dao-rs</module>
   </modules>
 </project>
