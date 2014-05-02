@@ -3,13 +3,13 @@
   <parent>
     <groupId>org.renci</groupId>
     <artifactId>opm</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
   </parent>
   <name>Open Provenance Model :: Datasource</name>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.renci.opm</groupId>
   <artifactId>opm-ds</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <dependencies>
     <dependency>
