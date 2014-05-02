@@ -17,11 +17,6 @@ import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 
 import org.junit.Test;
-import org.renci.opm.dao.model.Activity;
-import org.renci.opm.dao.model.Document;
-import org.renci.opm.dao.model.Element;
-import org.renci.opm.dao.model.ObjectFactory;
-import org.renci.opm.dao.model.QualifiedName;
 
 public class TestSerialization {
 
