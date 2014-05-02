@@ -1,6 +1,5 @@
 package org.renci.opm.dao.model;
 
-
 public class TypeAdapter extends AbstractTypedValueAdapter<Type> {
 
     public TypeAdapter() {
