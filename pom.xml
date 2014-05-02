@@ -2,7 +2,7 @@
   <parent>
     <groupId>org.renci.opm</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
   </parent>
   <name>Open Provenance Model</name>
   <modelVersion>4.0.0</modelVersion>
