@@ -2,7 +2,6 @@ package org.renci.opm.ws.impl;
 
 import org.renci.opm.dao.OPMDAOException;
 import org.renci.opm.dao.PrimarySourceDAO;
-import org.renci.opm.dao.model.Document;
 import org.renci.opm.dao.model.PrimarySource;
 import org.renci.opm.ws.PrimarySourceService;
 import org.slf4j.Logger;
