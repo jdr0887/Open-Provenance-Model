@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>org.renci</groupId>
+    <artifactId>opm</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <name>Open Provenance Model :: Config</name>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.renci.opm</groupId>
+  <artifactId>opm-config</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+	<artifactId>maven-antrun-plugin</artifactId>
+	<executions>
+	  <execution>
+	    <id>0</id>
+	    <phase>validate</phase>
+	    <configuration>
+	      <tasks>
+		<delete file="${basedir}/src/main/resources/org/renci/opm/config/opm.properties" />
+		<touch file="${basedir}/src/main/resources/org/renci/opm/config/opm.properties" mkdirs="true" />
+		<echo file="${basedir}/src/main/resources/org/renci/opm/config/opm.properties" append="true">
+version=${project.version}
+		</echo>
+	      </tasks>
+	    </configuration>
+	    <goals>
+	      <goal>run</goal>
+	    </goals>
+	  </execution>
+	</executions>
+      </plugin>
+      <plugin>
+	<groupId>org.apache.felix</groupId>
+	<artifactId>maven-bundle-plugin</artifactId>
+	<configuration>
+	  <instructions>
+	    <Private-Package />
+	    <Export-Package>org.renci.opm.config</Export-Package>
+	    <Import-Package>*</Import-Package>
+	  </instructions>
+	</configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
