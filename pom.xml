@@ -29,7 +29,7 @@
     </license>
   </licenses>
   <scm>
-    <developerConnection>scm:git:ssh://${user.name}@code.renci.org/gitroot/opm</developerConnection>
+    <developerConnection>scm:git:ssh://code.renci.org/gitroot/opm</developerConnection>
     <connection>scm:git:ssh://code.renci.org/gitroot/opm</connection>
     <tag>HEAD</tag>
   </scm>
