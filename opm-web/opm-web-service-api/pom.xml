@@ -17,10 +17,6 @@
     </dependency>
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jaxws_2.2_spec</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jaxrs_1.1_spec</artifactId>
       <scope>provided</scope>
     </dependency>
@@ -38,8 +34,6 @@
           <instructions>
 	    <Import-Package>javax.activation,
 	    javax.xml.bind.annotation,
-	    javax.xml.ws,
-	    javax.xml.ws.soap,
 	    javax.jws,
 	    javax.jws.soap,
 	    javax.wsdl,
