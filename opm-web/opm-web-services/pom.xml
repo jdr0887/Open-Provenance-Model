@@ -70,14 +70,31 @@
   </dependencies>
   <modules>
     <module>opm-web-service-activity</module>
+    <module>opm-web-service-alternate</module>
+    <module>opm-web-service-attribution</module>
+    <module>opm-web-service-communication</module>
+    <module>opm-web-service-delegation</module>
+    <module>opm-web-service-derivation</module>
     <module>opm-web-service-document</module>
     <module>opm-web-service-end</module>
+    <module>opm-web-service-influence</module>
+    <module>opm-web-service-insertion</module>
+    <module>opm-web-service-invalidation</module>
+    <module>opm-web-service-location</module>
     <module>opm-web-service-organization</module>
+    <module>opm-web-service-other</module>
     <module>opm-web-service-person</module>
+    <module>opm-web-service-plan</module>
     <module>opm-web-service-primary-source</module>
+    <module>opm-web-service-qualified-name</module>
     <module>opm-web-service-quotation</module>
+    <module>opm-web-service-removal</module>
     <module>opm-web-service-revision</module>
+    <module>opm-web-service-role</module>
     <module>opm-web-service-software-agent</module>
     <module>opm-web-service-start</module>
+    <module>opm-web-service-type</module>
+    <module>opm-web-service-usage</module>
+    <module>opm-web-service-value</module>
   </modules>
 </project>
