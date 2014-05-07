@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
-import org.renci.opm.dao.ActivityDAO;
+import org.renci.opm.dao.AlternateDAO;
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.model.Activity;
-import org.renci.opm.ws.ActivityService;
+import org.renci.opm.dao.model.Alternate;
+import org.renci.opm.ws.AlternateService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class AlternateServiceImpl implements ActivityService {
+public class AlternateServiceImpl implements AlternateService {
 
     private final Logger logger = LoggerFactory.getLogger(AlternateServiceImpl.class);
 
-    private ActivityDAO activityDAO;
+    private AlternateDAO alternateDAO;
 
     @Override
-    public Activity findById(Long id) {
+    public Alternate findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Activity ret = null;
+        Alternate ret = null;
         try {
-            ret = activityDAO.findById(id);
+            ret = alternateDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class AlternateServiceImpl implements ActivityService {
     }
 
     @Override
-    public Long save(Activity document) {
+    public Long save(Alternate document) {
         logger.info("ENTERING save(Document)");
         Long ret = null;
         try {
-            ret = activityDAO.save(document);
+            ret = alternateDAO.save(document);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public ActivityDAO getActivityDAO() {
-        return activityDAO;
+    public AlternateDAO getAlternateDAO() {
+        return alternateDAO;
     }
 
-    public void setActivityDAO(ActivityDAO activityDAO) {
-        this.activityDAO = activityDAO;
+    public void setAlternateDAO(AlternateDAO alternateDAO) {
+        this.alternateDAO = alternateDAO;
     }
 
 }

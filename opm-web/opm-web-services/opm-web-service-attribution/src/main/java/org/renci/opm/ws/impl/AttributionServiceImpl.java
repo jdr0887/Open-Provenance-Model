@@ -1,24 +1,25 @@
 package org.renci.opm.ws.impl;
 
-import org.renci.opm.dao.ActivityDAO;
+import org.renci.opm.dao.AttributionDAO;
 import org.renci.opm.dao.OPMDAOException;
 import org.renci.opm.dao.model.Activity;
-import org.renci.opm.ws.ActivityService;
+import org.renci.opm.dao.model.Attribution;
+import org.renci.opm.ws.AttributionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ActivityServiceImpl implements ActivityService {
+public class AttributionServiceImpl implements AttributionService {
 
-    private final Logger logger = LoggerFactory.getLogger(ActivityServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(AttributionServiceImpl.class);
 
-    private ActivityDAO activityDAO;
+    private AttributionDAO attributionDAO;
 
     @Override
-    public Activity findById(Long id) {
+    public Attribution findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Activity ret = null;
+        Attribution ret = null;
         try {
-            ret = activityDAO.findById(id);
+            ret = attributionDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +27,23 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Long save(Activity document) {
-        logger.info("ENTERING save(Document)");
+    public Long save(Attribution attribution) {
+        logger.info("ENTERING save(Attribution)");
         Long ret = null;
         try {
-            ret = activityDAO.save(document);
+            ret = attributionDAO.save(attribution);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public ActivityDAO getActivityDAO() {
-        return activityDAO;
+    public AttributionDAO getAttributionDAO() {
+        return attributionDAO;
     }
 
-    public void setActivityDAO(ActivityDAO activityDAO) {
-        this.activityDAO = activityDAO;
+    public void setAttributionDAO(AttributionDAO attributionDAO) {
+        this.attributionDAO = attributionDAO;
     }
 
 }

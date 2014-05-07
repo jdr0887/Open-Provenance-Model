@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
-import org.renci.opm.dao.ActivityDAO;
+import org.renci.opm.dao.InfluenceDAO;
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.model.Activity;
-import org.renci.opm.ws.ActivityService;
+import org.renci.opm.dao.model.Influence;
+import org.renci.opm.ws.InfluenceService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ActivityServiceImpl implements ActivityService {
+public class InfluenceServiceImpl implements InfluenceService {
 
-    private final Logger logger = LoggerFactory.getLogger(ActivityServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(InfluenceServiceImpl.class);
 
-    private ActivityDAO activityDAO;
+    private InfluenceDAO influenceDAO;
 
     @Override
-    public Activity findById(Long id) {
+    public Influence findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Activity ret = null;
+        Influence ret = null;
         try {
-            ret = activityDAO.findById(id);
+            ret = influenceDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Long save(Activity document) {
-        logger.info("ENTERING save(Document)");
+    public Long save(Influence influence) {
+        logger.info("ENTERING save(Influence)");
         Long ret = null;
         try {
-            ret = activityDAO.save(document);
+            ret = influenceDAO.save(influence);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public ActivityDAO getActivityDAO() {
-        return activityDAO;
+    public InfluenceDAO getInfluenceDAO() {
+        return influenceDAO;
     }
 
-    public void setActivityDAO(ActivityDAO activityDAO) {
-        this.activityDAO = activityDAO;
+    public void setInfluenceDAO(InfluenceDAO influenceDAO) {
+        this.influenceDAO = influenceDAO;
     }
 
 }

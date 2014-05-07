@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
-import org.renci.opm.dao.ActivityDAO;
+import org.renci.opm.dao.InvalidationDAO;
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.model.Activity;
-import org.renci.opm.ws.ActivityService;
+import org.renci.opm.dao.model.Invalidation;
+import org.renci.opm.ws.InvalidationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ActivityServiceImpl implements ActivityService {
+public class InvalidationServiceImpl implements InvalidationService {
 
-    private final Logger logger = LoggerFactory.getLogger(ActivityServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(InvalidationServiceImpl.class);
 
-    private ActivityDAO activityDAO;
+    private InvalidationDAO invalidationDAO;
 
     @Override
-    public Activity findById(Long id) {
+    public Invalidation findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Activity ret = null;
+        Invalidation ret = null;
         try {
-            ret = activityDAO.findById(id);
+            ret = invalidationDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Long save(Activity document) {
-        logger.info("ENTERING save(Document)");
+    public Long save(Invalidation invalidation) {
+        logger.info("ENTERING save(Invalidation)");
         Long ret = null;
         try {
-            ret = activityDAO.save(document);
+            ret = invalidationDAO.save(invalidation);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public ActivityDAO getActivityDAO() {
-        return activityDAO;
+    public InvalidationDAO getInvalidationDAO() {
+        return invalidationDAO;
     }
 
-    public void setActivityDAO(ActivityDAO activityDAO) {
-        this.activityDAO = activityDAO;
+    public void setInvalidationDAO(InvalidationDAO invalidationDAO) {
+        this.invalidationDAO = invalidationDAO;
     }
 
 }

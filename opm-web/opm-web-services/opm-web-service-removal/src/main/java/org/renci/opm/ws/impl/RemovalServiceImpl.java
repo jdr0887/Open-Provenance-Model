@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
-import org.renci.opm.dao.ActivityDAO;
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.model.Activity;
-import org.renci.opm.ws.ActivityService;
+import org.renci.opm.dao.RemovalDAO;
+import org.renci.opm.dao.model.Removal;
+import org.renci.opm.ws.RemovalService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ActivityServiceImpl implements ActivityService {
+public class RemovalServiceImpl implements RemovalService {
 
-    private final Logger logger = LoggerFactory.getLogger(ActivityServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(RemovalServiceImpl.class);
 
-    private ActivityDAO activityDAO;
+    private RemovalDAO removalDAO;
 
     @Override
-    public Activity findById(Long id) {
+    public Removal findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Activity ret = null;
+        Removal ret = null;
         try {
-            ret = activityDAO.findById(id);
+            ret = removalDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Long save(Activity document) {
+    public Long save(Removal removal) {
         logger.info("ENTERING save(Document)");
         Long ret = null;
         try {
-            ret = activityDAO.save(document);
+            ret = removalDAO.save(removal);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public ActivityDAO getActivityDAO() {
-        return activityDAO;
+    public RemovalDAO getRemovalDAO() {
+        return removalDAO;
     }
 
-    public void setActivityDAO(ActivityDAO activityDAO) {
-        this.activityDAO = activityDAO;
+    public void setRemovalDAO(RemovalDAO removalDAO) {
+        this.removalDAO = removalDAO;
     }
 
 }

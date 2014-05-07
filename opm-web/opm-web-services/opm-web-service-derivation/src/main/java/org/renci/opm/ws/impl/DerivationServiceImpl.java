@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
-import org.renci.opm.dao.ActivityDAO;
+import org.renci.opm.dao.DerivationDAO;
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.model.Activity;
-import org.renci.opm.ws.ActivityService;
+import org.renci.opm.dao.model.Derivation;
+import org.renci.opm.ws.DerivationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ActivityServiceImpl implements ActivityService {
+public class DerivationServiceImpl implements DerivationService {
 
-    private final Logger logger = LoggerFactory.getLogger(ActivityServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(DerivationServiceImpl.class);
 
-    private ActivityDAO activityDAO;
+    private DerivationDAO derivationDAO;
 
     @Override
-    public Activity findById(Long id) {
+    public Derivation findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Activity ret = null;
+        Derivation ret = null;
         try {
-            ret = activityDAO.findById(id);
+            ret = derivationDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Long save(Activity document) {
-        logger.info("ENTERING save(Document)");
+    public Long save(Derivation derivation) {
+        logger.info("ENTERING save(Derivation)");
         Long ret = null;
         try {
-            ret = activityDAO.save(document);
+            ret = derivationDAO.save(derivation);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public ActivityDAO getActivityDAO() {
-        return activityDAO;
+    public DerivationDAO getDerivationDAO() {
+        return derivationDAO;
     }
 
-    public void setActivityDAO(ActivityDAO activityDAO) {
-        this.activityDAO = activityDAO;
+    public void setDerivationDAO(DerivationDAO derivationDAO) {
+        this.derivationDAO = derivationDAO;
     }
 
 }

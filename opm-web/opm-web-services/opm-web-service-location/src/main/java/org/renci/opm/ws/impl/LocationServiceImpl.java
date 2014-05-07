@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
+import org.renci.opm.dao.LocationDAO;
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.PersonDAO;
-import org.renci.opm.dao.model.Person;
-import org.renci.opm.ws.PersonService;
+import org.renci.opm.dao.model.Location;
+import org.renci.opm.ws.LocationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PersonServiceImpl implements PersonService {
+public class LocationServiceImpl implements LocationService {
 
-    private final Logger logger = LoggerFactory.getLogger(PersonServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(LocationServiceImpl.class);
 
-    private PersonDAO personDAO;
+    private LocationDAO locationDAO;
 
     @Override
-    public Person findById(Long id) {
+    public Location findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Person ret = null;
+        Location ret = null;
         try {
-            ret = personDAO.findById(id);
+            ret = locationDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public Long save(Person person) {
-        logger.info("ENTERING save(Person)");
+    public Long save(Location Location) {
+        logger.info("ENTERING save(Location)");
         Long ret = null;
         try {
-            ret = personDAO.save(person);
+            ret = locationDAO.save(Location);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public PersonDAO getPersonDAO() {
-        return personDAO;
+    public LocationDAO getLocationDAO() {
+        return locationDAO;
     }
 
-    public void setPersonDAO(PersonDAO personDAO) {
-        this.personDAO = personDAO;
+    public void setLocationDAO(LocationDAO locationDAO) {
+        this.locationDAO = locationDAO;
     }
 
 }

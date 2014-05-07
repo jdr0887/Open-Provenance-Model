@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
-import org.renci.opm.dao.ActivityDAO;
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.model.Activity;
-import org.renci.opm.ws.ActivityService;
+import org.renci.opm.dao.QualifiedNameDAO;
+import org.renci.opm.dao.model.QualifiedName;
+import org.renci.opm.ws.QualifiedNameService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ActivityServiceImpl implements ActivityService {
+public class QualifiedNameServiceImpl implements QualifiedNameService {
 
-    private final Logger logger = LoggerFactory.getLogger(ActivityServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(QualifiedNameServiceImpl.class);
 
-    private ActivityDAO activityDAO;
+    private QualifiedNameDAO qualifiedNameDAO;
 
     @Override
-    public Activity findById(Long id) {
+    public QualifiedName findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Activity ret = null;
+        QualifiedName ret = null;
         try {
-            ret = activityDAO.findById(id);
+            ret = qualifiedNameDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Long save(Activity document) {
-        logger.info("ENTERING save(Document)");
+    public Long save(QualifiedName qualifiedName) {
+        logger.info("ENTERING save(QualifiedName)");
         Long ret = null;
         try {
-            ret = activityDAO.save(document);
+            ret = qualifiedNameDAO.save(qualifiedName);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public ActivityDAO getActivityDAO() {
-        return activityDAO;
+    public QualifiedNameDAO getQualifiedNameDAO() {
+        return qualifiedNameDAO;
     }
 
-    public void setActivityDAO(ActivityDAO activityDAO) {
-        this.activityDAO = activityDAO;
+    public void setQualifiedNameDAO(QualifiedNameDAO qualifiedNameDAO) {
+        this.qualifiedNameDAO = qualifiedNameDAO;
     }
 
 }

@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
-import org.renci.opm.dao.ActivityDAO;
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.model.Activity;
-import org.renci.opm.ws.ActivityService;
+import org.renci.opm.dao.UsageDAO;
+import org.renci.opm.dao.model.Usage;
+import org.renci.opm.ws.UsageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ActivityServiceImpl implements ActivityService {
+public class UsageServiceImpl implements UsageService {
 
-    private final Logger logger = LoggerFactory.getLogger(ActivityServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(UsageServiceImpl.class);
 
-    private ActivityDAO activityDAO;
+    private UsageDAO usageDAO;
 
     @Override
-    public Activity findById(Long id) {
+    public Usage findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Activity ret = null;
+        Usage ret = null;
         try {
-            ret = activityDAO.findById(id);
+            ret = usageDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Long save(Activity document) {
-        logger.info("ENTERING save(Document)");
+    public Long save(Usage usage) {
+        logger.info("ENTERING save(Usage)");
         Long ret = null;
         try {
-            ret = activityDAO.save(document);
+            ret = usageDAO.save(usage);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public ActivityDAO getActivityDAO() {
-        return activityDAO;
+    public UsageDAO getUsageDAO() {
+        return usageDAO;
     }
 
-    public void setActivityDAO(ActivityDAO activityDAO) {
-        this.activityDAO = activityDAO;
+    public void setUsageDAO(UsageDAO usageDAO) {
+        this.usageDAO = usageDAO;
     }
 
 }

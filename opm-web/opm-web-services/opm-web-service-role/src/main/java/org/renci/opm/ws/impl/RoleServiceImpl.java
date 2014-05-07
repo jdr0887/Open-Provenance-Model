@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.PersonDAO;
-import org.renci.opm.dao.model.Person;
-import org.renci.opm.ws.PersonService;
+import org.renci.opm.dao.RoleDAO;
+import org.renci.opm.dao.model.Role;
+import org.renci.opm.ws.RoleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PersonServiceImpl implements PersonService {
+public class RoleServiceImpl implements RoleService {
 
-    private final Logger logger = LoggerFactory.getLogger(PersonServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(RoleServiceImpl.class);
 
-    private PersonDAO personDAO;
+    private RoleDAO roleDAO;
 
     @Override
-    public Person findById(Long id) {
+    public Role findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Person ret = null;
+        Role ret = null;
         try {
-            ret = personDAO.findById(id);
+            ret = roleDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public Long save(Person person) {
-        logger.info("ENTERING save(Person)");
+    public Long save(Role role) {
+        logger.info("ENTERING save(Role)");
         Long ret = null;
         try {
-            ret = personDAO.save(person);
+            ret = roleDAO.save(role);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public PersonDAO getPersonDAO() {
-        return personDAO;
+    public RoleDAO getRoleDAO() {
+        return roleDAO;
     }
 
-    public void setPersonDAO(PersonDAO personDAO) {
-        this.personDAO = personDAO;
+    public void setRoleDAO(RoleDAO roleDAO) {
+        this.roleDAO = roleDAO;
     }
 
 }

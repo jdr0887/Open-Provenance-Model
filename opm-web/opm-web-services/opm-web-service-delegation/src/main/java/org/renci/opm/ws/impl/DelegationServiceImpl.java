@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
-import org.renci.opm.dao.ActivityDAO;
+import org.renci.opm.dao.DelegationDAO;
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.model.Activity;
-import org.renci.opm.ws.ActivityService;
+import org.renci.opm.dao.model.Delegation;
+import org.renci.opm.ws.DelegationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ActivityServiceImpl implements ActivityService {
+public class DelegationServiceImpl implements DelegationService {
 
-    private final Logger logger = LoggerFactory.getLogger(ActivityServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(DelegationServiceImpl.class);
 
-    private ActivityDAO activityDAO;
+    private DelegationDAO delegationDAO;
 
     @Override
-    public Activity findById(Long id) {
+    public Delegation findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Activity ret = null;
+        Delegation ret = null;
         try {
-            ret = activityDAO.findById(id);
+            ret = delegationDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Long save(Activity document) {
-        logger.info("ENTERING save(Document)");
+    public Long save(Delegation document) {
+        logger.info("ENTERING save(Delegation)");
         Long ret = null;
         try {
-            ret = activityDAO.save(document);
+            ret = delegationDAO.save(document);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public ActivityDAO getActivityDAO() {
-        return activityDAO;
+    public DelegationDAO getDelegationDAO() {
+        return delegationDAO;
     }
 
-    public void setActivityDAO(ActivityDAO activityDAO) {
-        this.activityDAO = activityDAO;
+    public void setDelegationDAO(DelegationDAO delegationDAO) {
+        this.delegationDAO = delegationDAO;
     }
 
 }

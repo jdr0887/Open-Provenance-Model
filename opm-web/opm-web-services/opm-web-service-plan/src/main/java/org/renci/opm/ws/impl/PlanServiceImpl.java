@@ -1,24 +1,24 @@
 package org.renci.opm.ws.impl;
 
-import org.renci.opm.dao.ActivityDAO;
 import org.renci.opm.dao.OPMDAOException;
-import org.renci.opm.dao.model.Activity;
-import org.renci.opm.ws.ActivityService;
+import org.renci.opm.dao.PlanDAO;
+import org.renci.opm.dao.model.Plan;
+import org.renci.opm.ws.PlanService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ActivityServiceImpl implements ActivityService {
+public class PlanServiceImpl implements PlanService {
 
-    private final Logger logger = LoggerFactory.getLogger(ActivityServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(PlanServiceImpl.class);
 
-    private ActivityDAO activityDAO;
+    private PlanDAO planDAO;
 
     @Override
-    public Activity findById(Long id) {
+    public Plan findById(Long id) {
         logger.info("ENTERING findById(Long)");
-        Activity ret = null;
+        Plan ret = null;
         try {
-            ret = activityDAO.findById(id);
+            ret = planDAO.findById(id);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
@@ -26,23 +26,23 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Long save(Activity document) {
-        logger.info("ENTERING save(Document)");
+    public Long save(Plan plan) {
+        logger.info("ENTERING save(Plan)");
         Long ret = null;
         try {
-            ret = activityDAO.save(document);
+            ret = planDAO.save(plan);
         } catch (OPMDAOException e) {
             e.printStackTrace();
         }
         return ret;
     }
 
-    public ActivityDAO getActivityDAO() {
-        return activityDAO;
+    public PlanDAO getPlanDAO() {
+        return planDAO;
     }
 
-    public void setActivityDAO(ActivityDAO activityDAO) {
-        this.activityDAO = activityDAO;
+    public void setPlanDAO(PlanDAO planDAO) {
+        this.planDAO = planDAO;
     }
 
 }
