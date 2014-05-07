@@ -1,11 +1,11 @@
 package org.renci.opm.dao.jpa;
 
-import org.renci.opm.dao.DelegationDAO;
-import org.renci.opm.dao.model.Delegation;
+import org.renci.opm.dao.DerivationDAO;
+import org.renci.opm.dao.model.Derivation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class DerivationDAOImpl extends BaseDAOImpl<Delegation, Long> implements DelegationDAO {
+public class DerivationDAOImpl extends BaseDAOImpl<Derivation, Long> implements DerivationDAO {
 
     private final Logger logger = LoggerFactory.getLogger(DerivationDAOImpl.class);
 
@@ -14,8 +14,8 @@ public class DerivationDAOImpl extends BaseDAOImpl<Delegation, Long> implements 
     }
 
     @Override
-    public Class<Delegation> getPersistentClass() {
-        return Delegation.class;
+    public Class<Derivation> getPersistentClass() {
+        return Derivation.class;
     }
 
 }
