@@ -2,13 +2,13 @@
   <parent>
     <groupId>org.renci.opm</groupId>
     <artifactId>opm-dao</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.3</version>
   </parent>
   <name>Open Provenance Model :: DAO :: RS</name>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.renci.opm.opm-dao</groupId>
   <artifactId>opm-dao-rs</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.3</version>
   <packaging>bundle</packaging>
   <dependencies>
     <dependency>

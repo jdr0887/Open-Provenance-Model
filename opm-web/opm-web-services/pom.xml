@@ -2,13 +2,13 @@
   <parent>
     <groupId>org.renci.opm</groupId>
     <artifactId>opm-web</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.3</version>
   </parent>
   <name>Open Provenance Model :: Web :: Web Services</name>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.renci.opm.opm-web</groupId>
   <artifactId>opm-web-services</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.3</version>
   <packaging>pom</packaging>
   <dependencies>
     <dependency>
