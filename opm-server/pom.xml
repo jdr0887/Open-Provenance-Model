@@ -3,13 +3,13 @@
   <parent>
     <groupId>org.renci</groupId>
     <artifactId>opm</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
   </parent>
   <name>Open Provenance Model :: Server</name>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.renci.opm</groupId>
   <artifactId>opm-server</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
   <dependencies>
     <dependency>
