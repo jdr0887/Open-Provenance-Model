@@ -8,19 +8,19 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import org.renci.opm.dao.model.Activity;
+import org.renci.opm.dao.model.Attribution;
 
-@Path("/ActivityService/")
+@Path("/AttributionService/")
 @Consumes(MediaType.APPLICATION_XML)
 @Produces(MediaType.APPLICATION_XML)
 public interface AttributionService {
 
     @GET
     @Path("/findById/{id}")
-    public Activity findById(@PathParam("id") Long id);
+    public Attribution findById(@PathParam("id") Long id);
 
     @POST
     @Path("/")
-    public Long save(Activity activity);
+    public Long save(Attribution attribution);
 
 }
