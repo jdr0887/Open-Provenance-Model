@@ -4,9 +4,27 @@ public class OPMDAOBean {
 
     private ActivityDAO activityDAO;
 
+    private AssociationDAO associationDAO;
+
+    private AlternateDAO alternateDAO;
+
+    private AttributionDAO attributionDAO;
+
+    private CommunicationDAO communicationDAO;
+
+    private DelegationDAO delegationDAO;
+
+    private DerivationDAO derivationDAO;
+
     private DocumentDAO documentDAO;
 
     private EndDAO endDAO;
+
+    private InfluenceDAO influenceDAO;
+
+    private InsertionDAO insertionDAO;
+
+    private InvalidationDAO invalidationDAO;
 
     private InternationalizedStringDAO internationalizedStringDAO;
 
@@ -18,21 +36,29 @@ public class OPMDAOBean {
 
     private PersonDAO personDAO;
 
+    private PlanDAO planDAO;
+
     private PrimarySourceDAO primarySourceDAO;
 
     private QualifiedNameDAO qualifiedNameDAO;
 
     private QuotationDAO quotationDAO;
 
-    private RevisionDAO revisionDAO;
+    private RemovalDAO removalDAO;
 
     private RoleDAO roleDAO;
+
+    private RevisionDAO revisionDAO;
 
     private SoftwareAgentDAO softwareAgentDAO;
 
     private StartDAO startDAO;
 
     private TypeDAO typeDAO;
+
+    private UsageDAO usageDAO;
+
+    private ValueDAO valueDAO;
 
     public OPMDAOBean() {
         super();
@@ -44,6 +70,54 @@ public class OPMDAOBean {
 
     public void setActivityDAO(ActivityDAO activityDAO) {
         this.activityDAO = activityDAO;
+    }
+
+    public AssociationDAO getAssociationDAO() {
+        return associationDAO;
+    }
+
+    public void setAssociationDAO(AssociationDAO associationDAO) {
+        this.associationDAO = associationDAO;
+    }
+
+    public AlternateDAO getAlternateDAO() {
+        return alternateDAO;
+    }
+
+    public void setAlternateDAO(AlternateDAO alternateDAO) {
+        this.alternateDAO = alternateDAO;
+    }
+
+    public AttributionDAO getAttributionDAO() {
+        return attributionDAO;
+    }
+
+    public void setAttributionDAO(AttributionDAO attributionDAO) {
+        this.attributionDAO = attributionDAO;
+    }
+
+    public CommunicationDAO getCommunicationDAO() {
+        return communicationDAO;
+    }
+
+    public void setCommunicationDAO(CommunicationDAO communicationDAO) {
+        this.communicationDAO = communicationDAO;
+    }
+
+    public DelegationDAO getDelegationDAO() {
+        return delegationDAO;
+    }
+
+    public void setDelegationDAO(DelegationDAO delegationDAO) {
+        this.delegationDAO = delegationDAO;
+    }
+
+    public DerivationDAO getDerivationDAO() {
+        return derivationDAO;
+    }
+
+    public void setDerivationDAO(DerivationDAO derivationDAO) {
+        this.derivationDAO = derivationDAO;
     }
 
     public DocumentDAO getDocumentDAO() {
@@ -60,6 +134,30 @@ public class OPMDAOBean {
 
     public void setEndDAO(EndDAO endDAO) {
         this.endDAO = endDAO;
+    }
+
+    public InfluenceDAO getInfluenceDAO() {
+        return influenceDAO;
+    }
+
+    public void setInfluenceDAO(InfluenceDAO influenceDAO) {
+        this.influenceDAO = influenceDAO;
+    }
+
+    public InsertionDAO getInsertionDAO() {
+        return insertionDAO;
+    }
+
+    public void setInsertionDAO(InsertionDAO insertionDAO) {
+        this.insertionDAO = insertionDAO;
+    }
+
+    public InvalidationDAO getInvalidationDAO() {
+        return invalidationDAO;
+    }
+
+    public void setInvalidationDAO(InvalidationDAO invalidationDAO) {
+        this.invalidationDAO = invalidationDAO;
     }
 
     public InternationalizedStringDAO getInternationalizedStringDAO() {
@@ -102,6 +200,14 @@ public class OPMDAOBean {
         this.personDAO = personDAO;
     }
 
+    public PlanDAO getPlanDAO() {
+        return planDAO;
+    }
+
+    public void setPlanDAO(PlanDAO planDAO) {
+        this.planDAO = planDAO;
+    }
+
     public PrimarySourceDAO getPrimarySourceDAO() {
         return primarySourceDAO;
     }
@@ -126,12 +232,12 @@ public class OPMDAOBean {
         this.quotationDAO = quotationDAO;
     }
 
-    public RevisionDAO getRevisionDAO() {
-        return revisionDAO;
+    public RemovalDAO getRemovalDAO() {
+        return removalDAO;
     }
 
-    public void setRevisionDAO(RevisionDAO revisionDAO) {
-        this.revisionDAO = revisionDAO;
+    public void setRemovalDAO(RemovalDAO removalDAO) {
+        this.removalDAO = removalDAO;
     }
 
     public RoleDAO getRoleDAO() {
@@ -140,6 +246,14 @@ public class OPMDAOBean {
 
     public void setRoleDAO(RoleDAO roleDAO) {
         this.roleDAO = roleDAO;
+    }
+
+    public RevisionDAO getRevisionDAO() {
+        return revisionDAO;
+    }
+
+    public void setRevisionDAO(RevisionDAO revisionDAO) {
+        this.revisionDAO = revisionDAO;
     }
 
     public SoftwareAgentDAO getSoftwareAgentDAO() {
@@ -164,6 +278,22 @@ public class OPMDAOBean {
 
     public void setTypeDAO(TypeDAO typeDAO) {
         this.typeDAO = typeDAO;
+    }
+
+    public UsageDAO getUsageDAO() {
+        return usageDAO;
+    }
+
+    public void setUsageDAO(UsageDAO usageDAO) {
+        this.usageDAO = usageDAO;
+    }
+
+    public ValueDAO getValueDAO() {
+        return valueDAO;
+    }
+
+    public void setValueDAO(ValueDAO valueDAO) {
+        this.valueDAO = valueDAO;
     }
 
 }
