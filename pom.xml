@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.renci</groupId>
   <artifactId>opm</artifactId>
-  <version>0.0.5</version>
+  <version>0.0.6-SNAPSHOT</version>
   <packaging>pom</packaging>
   <url>https://ci-dev.renci.org/site/opm</url>
   <properties>
@@ -31,7 +31,7 @@
   <scm>
     <developerConnection>scm:git:ssh://code.renci.org/gitroot/opm</developerConnection>
     <connection>scm:git:ssh://code.renci.org/gitroot/opm</connection>
-    <tag>opm-0.0.5</tag>
+    <tag>HEAD</tag>
   </scm>
   <dependencyManagement>
     <dependencies>
@@ -161,22 +161,22 @@
       <dependency>
       	<groupId>org.renci.opm</groupId>
       	<artifactId>opm-config</artifactId>
-      	<version>0.0.5</version>
+      	<version>0.0.6-SNAPSHOT</version>
       </dependency>
       <dependency>
       	<groupId>org.renci.opm.opm-web</groupId>
       	<artifactId>opm-web-service-api</artifactId>
-      	<version>0.0.5</version>
+      	<version>0.0.6-SNAPSHOT</version>
       </dependency>
       <dependency>
       	<groupId>org.renci.opm.opm-dao</groupId>
       	<artifactId>opm-dao-api</artifactId>
-      	<version>0.0.5</version>
+      	<version>0.0.6-SNAPSHOT</version>
       </dependency>
       <dependency>
       	<groupId>org.renci.opm.opm-dao</groupId>
       	<artifactId>opm-dao-jpa</artifactId>
-      	<version>0.0.5</version>
+      	<version>0.0.6-SNAPSHOT</version>
       </dependency>
       <dependency>
 	<groupId>commons-httpclient</groupId>
