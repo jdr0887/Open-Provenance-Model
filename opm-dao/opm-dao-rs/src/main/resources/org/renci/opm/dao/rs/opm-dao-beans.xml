@@ -4,75 +4,132 @@
 
   <bean id="configurationService" class="org.renci.opm.config.OPMConfigurationServiceImpl" singleton="true" />
 
-  <bean id="activityDAO" class="org.renci.opm.dao.rs.ActivityDAOImpl" init-method="init" singleton="true">
+  <bean id="activityDAO" class="org.renci.opm.dao.rs.ActivityDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="documentDAO" class="org.renci.opm.dao.rs.DocumentDAOImpl" init-method="init" singleton="true">
+  <bean id="alternateDAO" class="org.renci.opm.dao.rs.AlternateDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="endDAO" class="org.renci.opm.dao.rs.EndDAOImpl" init-method="init" singleton="true">
+  <bean id="associationDAO" class="org.renci.opm.dao.rs.AssociationDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="internationalizedStringDAO" class="org.renci.opm.dao.rs.InternationalizedStringDAOImpl" init-method="init" singleton="true">
+  <bean id="attributionDAO" class="org.renci.opm.dao.rs.AttributionDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="locationDAO" class="org.renci.opm.dao.rs.LocationDAOImpl" init-method="init" singleton="true">
+  <bean id="communicationDAO" class="org.renci.opm.dao.rs.CommunicationDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="organizationDAO" class="org.renci.opm.dao.rs.OrganizationDAOImpl" init-method="init" singleton="true">
+  <bean id="delegationDAO" class="org.renci.opm.dao.rs.DelegationDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="otherDAO" class="org.renci.opm.dao.rs.OtherDAOImpl" init-method="init" singleton="true">
+  <bean id="derivationDAO" class="org.renci.opm.dao.rs.DerivationDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="personDAO" class="org.renci.opm.dao.rs.PersonDAOImpl" init-method="init" singleton="true">
+  <bean id="documentDAO" class="org.renci.opm.dao.rs.DocumentDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="primarySourceDAO" class="org.renci.opm.dao.rs.PrimarySourceDAOImpl" init-method="init" singleton="true">
+  <bean id="endDAO" class="org.renci.opm.dao.rs.EndDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="qualifiedNameDAO" class="org.renci.opm.dao.rs.QualifiedNameDAOImpl" init-method="init" singleton="true">
+  <bean id="influenceDAO" class="org.renci.opm.dao.rs.InfluenceDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="quotationDAO" class="org.renci.opm.dao.rs.QuotationDAOImpl" init-method="init" singleton="true">
+  <bean id="insertionDAO" class="org.renci.opm.dao.rs.InsertionDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="revisionDAO" class="org.renci.opm.dao.rs.RevisionDAOImpl" init-method="init" singleton="true">
+  <bean id="internationalizedStringDAO" class="org.renci.opm.dao.rs.InternationalizedStringDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="roleDAO" class="org.renci.opm.dao.rs.RoleDAOImpl" init-method="init" singleton="true">
+  <bean id="invalidationDAO" class="org.renci.opm.dao.rs.InvalidationDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="softwareAgentDAO" class="org.renci.opm.dao.rs.SoftwareAgentDAOImpl" init-method="init" singleton="true">
+  <bean id="locationDAO" class="org.renci.opm.dao.rs.LocationDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="startDAO" class="org.renci.opm.dao.rs.StartDAOImpl" init-method="init" singleton="true">
+  <bean id="organizationDAO" class="org.renci.opm.dao.rs.OrganizationDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
-  <bean id="typeDAO" class="org.renci.opm.dao.rs.TypeDAOImpl" init-method="init" singleton="true">
+  <bean id="otherDAO" class="org.renci.opm.dao.rs.OtherDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="personDAO" class="org.renci.opm.dao.rs.PersonDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="primarySourceDAO" class="org.renci.opm.dao.rs.PrimarySourceDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="qualifiedNameDAO" class="org.renci.opm.dao.rs.QualifiedNameDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="quotationDAO" class="org.renci.opm.dao.rs.QuotationDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="revisionDAO" class="org.renci.opm.dao.rs.RevisionDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="removalDAO" class="org.renci.opm.dao.rs.RemovalDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="roleDAO" class="org.renci.opm.dao.rs.RoleDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="softwareAgentDAO" class="org.renci.opm.dao.rs.SoftwareAgentDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="startDAO" class="org.renci.opm.dao.rs.StartDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="typeDAO" class="org.renci.opm.dao.rs.TypeDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="usageDAO" class="org.renci.opm.dao.rs.UsageDAOImpl" singleton="true">
+    <property name="configurationService" ref="configurationService" />
+  </bean>
+
+  <bean id="valueDAO" class="org.renci.opm.dao.rs.ValueDAOImpl" singleton="true">
     <property name="configurationService" ref="configurationService" />
   </bean>
 
   <bean id="opmBean" class="org.renci.opm.dao.OPMDAOBean">
     <property name="activityDAO" ref="activityDAO" />
+    <property name="alternateDAO" ref="alternateDAO" />
+    <property name="associationDAO" ref="alternateDAO" />
+    <property name="attributionDAO" ref="attributionDAO" />
+    <property name="communicationDAO" ref="communicationDAO" />
+    <property name="delegationDAO" ref="delegationDAO" />
+    <property name="derivationDAO" ref="derivationDAO" />
     <property name="documentDAO" ref="documentDAO" />
     <property name="endDAO" ref="endDAO" />
+    <property name="influenceDAO" ref="influenceDAO" />
+    <property name="insertionDAO" ref="insertionDAO" />
     <property name="internationalizedStringDAO" ref="internationalizedStringDAO" />
+    <property name="invalidationDAO" ref="invalidationDAO" />
     <property name="locationDAO" ref="locationDAO" />
     <property name="organizationDAO" ref="organizationDAO" />
     <property name="otherDAO" ref="otherDAO" />
@@ -80,10 +137,13 @@
     <property name="primarySourceDAO" ref="primarySourceDAO" />
     <property name="quotationDAO" ref="quotationDAO" />
     <property name="revisionDAO" ref="revisionDAO" />
+    <property name="removalDAO" ref="removalDAO" />
     <property name="roleDAO" ref="roleDAO" />
     <property name="softwareAgentDAO" ref="softwareAgentDAO" />
     <property name="startDAO" ref="startDAO" />
     <property name="typeDAO" ref="typeDAO" />
+    <property name="usageDAO" ref="usageDAO" />
+    <property name="valueDAO" ref="valueDAO" />
   </bean>
 
 </beans>
