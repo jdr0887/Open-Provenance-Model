@@ -56,6 +56,10 @@ public class OPMConfigurationServiceImpl implements OPMConfigurationService {
         return getProperties().getProperty(OPMConfigurationService.WEB_SERVICE_HOST, def);
     }
 
+    public void setWebServiceHost(String value) {
+        getProperties().setProperty(OPMConfigurationService.WEB_SERVICE_HOST, value);
+    }
+
     @Override
     public RunModeType getRunMode() {
         String version = getVersion(null);
@@ -70,4 +74,9 @@ public class OPMConfigurationServiceImpl implements OPMConfigurationService {
         String timeout = getProperties().getProperty(OPMConfigurationService.WEB_SERVICE_TIMEOUT, "300000");
         return Long.valueOf(timeout);
     }
+
+    public void setWebServiceTimeout(Long value) {
+        getProperties().setProperty(OPMConfigurationService.WEB_SERVICE_TIMEOUT, value.toString());
+    }
+
 }
