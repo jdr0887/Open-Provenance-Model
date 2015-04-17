@@ -16,6 +16,10 @@
       <artifactId>jaxb-api</artifactId>
     </dependency> 
     <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.apache.openjpa</groupId>
       <artifactId>openjpa</artifactId>
     </dependency>
@@ -24,17 +28,13 @@
       <artifactId>geronimo-jpa_2.0_spec</artifactId>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>com.sun.xml.bind</groupId>
-      <artifactId>jaxb-impl</artifactId>
-    </dependency>
   </dependencies>
   <build>
     <plugins> 
       <plugin>
 	<groupId>org.codehaus.mojo</groupId>
 	<artifactId>jaxb2-maven-plugin</artifactId>
-	<version>1.5</version>
+	<version>1.6</version>
 	<executions>
 	  <execution>
 	    <id>schemagen</id>
@@ -112,6 +112,7 @@
 		<exclude>**/model/*_.java</exclude>
 		<exclude>**/model/*Adapter.java</exclude>
 		<exclude>**/model/*Factory.java</exclude>
+		<exclude>**/model/*Type.java</exclude>
 	      </excludes>
 	    </configuration>
 	    <goals>
