@@ -2,13 +2,13 @@
   <parent>
     <groupId>org.renci.opm</groupId>
     <artifactId>opm-web-services</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7-SNAPSHOT</version>
   </parent>
   <name>Open Provenance Model :: Web Services :: Removal</name>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.renci.opm.opm-web-services</groupId>
   <artifactId>opm-web-service-removal</artifactId>
-  <version>0.0.6</version>
+  <version>0.0.7-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <build>
     <plugins>

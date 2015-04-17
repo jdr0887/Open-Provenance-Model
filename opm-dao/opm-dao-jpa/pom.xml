@@ -2,13 +2,13 @@
   <parent>
     <groupId>org.renci.opm</groupId>
     <artifactId>opm-dao</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7-SNAPSHOT</version>
   </parent>
   <name>Open Provenance Model :: DAO :: JPA</name>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.renci.opm.opm-dao</groupId>
   <artifactId>opm-dao-jpa</artifactId>
-  <version>0.0.6</version>
+  <version>0.0.7-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <dependencies>
     <dependency>
