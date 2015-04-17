@@ -7,8 +7,8 @@
     <bundle>mvn:commons-cli/commons-cli/${commons.cli.version}</bundle>
     <bundle>mvn:commons-pool/commons-pool/${commons.pool.version}</bundle>
     <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/${commons.dbcp.version}_3</bundle>
-    <bundle>mvn:org.apache.commons/commons-lang3/3.1</bundle>
-    <bundle>mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
+    <bundle>mvn:org.apache.commons/commons-lang3/${commons.lang.version}</bundle>
+    <bundle>mvn:commons-lang/commons-lang/2.4</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle>mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
     <bundle>mvn:commons-discovery/commons-discovery/${commons.discovery.version}</bundle>
@@ -46,34 +46,34 @@
   </feature>
 
   <feature name="opm-web-services" version="${project.version}" resolver="(obr)">
-    <bundle>mvn:org.renci.opm.opm-web/opm-web-service-api/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-activity/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-alternate/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-attribution/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-communication/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-delegation/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-derivation/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-document/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-end/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-influence/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-insertion/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-invalidation/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-location/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-organization/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-other/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-person/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-plan/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-primary-source/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-qualified-name/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-quotation/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-removal/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-revision/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-role/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-software-agent/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-start/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-type/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-usage/${project.version}</bundle>
-    <bundle>mvn:org.renci.opm.opm-web.opm-web-services/opm-web-service-value/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm/opm-web-service-api/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-activity/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-alternate/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-attribution/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-communication/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-delegation/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-derivation/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-document/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-end/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-influence/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-insertion/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-invalidation/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-location/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-organization/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-other/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-person/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-plan/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-primary-source/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-qualified-name/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-quotation/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-removal/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-revision/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-role/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-software-agent/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-start/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-type/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-usage/${project.version}</bundle>
+    <bundle>mvn:org.renci.opm.opm-web-services/opm-web-service-value/${project.version}</bundle>
   </feature>
 
   <feature name="opm" version="${project.version}" resolver="(obr)">    
