@@ -2,13 +2,13 @@
   <parent>
     <groupId>org.renci.opm</groupId>
     <artifactId>opm-web-services</artifactId>
-    <version>0.0.6-SNAPSHOT</version>
+    <version>0.0.6</version>
   </parent>
   <name>Open Provenance Model :: Web Services :: Insertion</name>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.renci.opm.opm-web-services</groupId>
   <artifactId>opm-web-service-insertion</artifactId>
-  <version>0.0.6-SNAPSHOT</version>
+  <version>0.0.6</version>
   <packaging>bundle</packaging>
   <build>
     <plugins>
